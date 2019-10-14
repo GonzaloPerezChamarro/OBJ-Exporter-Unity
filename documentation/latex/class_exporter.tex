@@ -1,0 +1,291 @@
+\hypertarget{class_exporter}{}\section{Exporter Class Reference}
+\label{class_exporter}\index{Exporter@{Exporter}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_exporter_a2a977cb5ac8f637fcb570e73f650eca0}{Exporter}} ()
+\begin{DoxyCompactList}\small\item\em Construye el exportador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_exporter_a0d1b2893c5cef1e4d4d52fcb1e0759ea}{$\sim$\+Exporter}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_exporter_af0025a505a4a0889a210467138c32b62}{export\+\_\+obj}} (std\+::string \&path, std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Genera un archivo .obj con el nombre y en la ruta recibidas. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_exporter_a2e2191962453067d9b6befbc4b6842d1}{get\+\_\+path}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve la ruta de exportacion actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_exporter_a5230d994d0bf785b380b9fd714f63779}{set\+\_\+path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de la ruta actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_exporter_a1435d0243f166ca6cd9a8e0c536ff0a5}{add\+\_\+mesh}} (\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} position, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} rotation, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} scale, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} vertex\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} normals\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structmathexp_1_1_vector2f}{Vector2f}} uvs\mbox{[}$\,$\mbox{]}, int size\+\_\+v, int size\+\_\+n, int size\+\_\+uv)
+\begin{DoxyCompactList}\small\item\em Añade una nueva malla al vector de mallas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_exporter_ab4fd707721e3b7dab9e628659826ba91}{set\+\_\+mesh\+\_\+transform}} (int index, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} position, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} rotation, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} scale)
+\begin{DoxyCompactList}\small\item\em Modifica el valor del transform de una malla. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_exporter_aefd37f252280f8c4aa8942aad3295bf2}{set\+\_\+mesh\+\_\+by\+\_\+index}} (int index, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} vertex\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} normals\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structmathexp_1_1_vector2f}{Vector2f}} uvs\mbox{[}$\,$\mbox{]}, int size\+\_\+v, int size\+\_\+n, int size\+\_\+uv)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de una malla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_exporter_a8a53ffeabad803db16f0cafffd38793f}{set\+\_\+meshes\+\_\+count}} (int size)
+\begin{DoxyCompactList}\small\item\em Modifica el tamaño del vector de mallas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_exporter_a65ae525fd7dcfeec22910ad3dc5cd461}{set\+\_\+mesh\+\_\+submeshes\+\_\+count}} (int index, int size)
+\begin{DoxyCompactList}\small\item\em Modifica el tamaño del numero de submallas de una malla. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_exporter_ad51828efe27f5445df5dfc178afe4d6c}{set\+\_\+submesh\+\_\+triangles}} (int index, int submesh, int triangles\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de los triangulos de una submalla. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_exporter_a46b7cd63af64656de8a9ab0b36b52d6f}{get\+\_\+log}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve log. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_exporter_a3e6552a8e20d64bc630cebd74c1f58f7}{get\+\_\+meshes\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de meshes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_exporter_a2a977cb5ac8f637fcb570e73f650eca0}\label{class_exporter_a2a977cb5ac8f637fcb570e73f650eca0}} 
+\index{Exporter@{Exporter}!Exporter@{Exporter}}
+\index{Exporter@{Exporter}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{Exporter()}{Exporter()}}
+{\footnotesize\ttfamily Exporter\+::\+Exporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construye el exportador. 
+
+\mbox{\Hypertarget{class_exporter_a0d1b2893c5cef1e4d4d52fcb1e0759ea}\label{class_exporter_a0d1b2893c5cef1e4d4d52fcb1e0759ea}} 
+\index{Exporter@{Exporter}!````~Exporter@{$\sim$Exporter}}
+\index{````~Exporter@{$\sim$Exporter}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{$\sim$Exporter()}{~Exporter()}}
+{\footnotesize\ttfamily Exporter\+::$\sim$\+Exporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_exporter_a1435d0243f166ca6cd9a8e0c536ff0a5}\label{class_exporter_a1435d0243f166ca6cd9a8e0c536ff0a5}} 
+\index{Exporter@{Exporter}!add\_mesh@{add\_mesh}}
+\index{add\_mesh@{add\_mesh}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{add\_mesh()}{add\_mesh()}}
+{\footnotesize\ttfamily void Exporter\+::add\+\_\+mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{position,  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{rotation,  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{scale,  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{vertex\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{normals\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector2f}{Vector2f}}}]{uvs\mbox{[}$\,$\mbox{]},  }\item[{int}]{size\+\_\+v,  }\item[{int}]{size\+\_\+n,  }\item[{int}]{size\+\_\+uv }\end{DoxyParamCaption})}
+
+
+
+Añade una nueva malla al vector de mallas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Posicion de la malla \\
+\hline
+{\em rotation} & rotacion de la malla \\
+\hline
+{\em scale} & escala de la malla \\
+\hline
+{\em vertex} & conjunto de vertices \\
+\hline
+{\em normals} & conjunto de normales \\
+\hline
+{\em uvs} & conjunto de uvs \\
+\hline
+{\em size\+\_\+v} & \\
+\hline
+{\em size\+\_\+n} & \\
+\hline
+{\em size\+\_\+uv} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_exporter_af0025a505a4a0889a210467138c32b62}\label{class_exporter_af0025a505a4a0889a210467138c32b62}} 
+\index{Exporter@{Exporter}!export\_obj@{export\_obj}}
+\index{export\_obj@{export\_obj}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{export\_obj()}{export\_obj()}}
+{\footnotesize\ttfamily bool Exporter\+::export\+\_\+obj (\begin{DoxyParamCaption}\item[{std\+::string \&}]{path,  }\item[{std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Genera un archivo .obj con el nombre y en la ruta recibidas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Directorio de creacion \\
+\hline
+{\em name} & Nombre del archivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Exportacion correcta 
+
+false Error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_exporter_a46b7cd63af64656de8a9ab0b36b52d6f}\label{class_exporter_a46b7cd63af64656de8a9ab0b36b52d6f}} 
+\index{Exporter@{Exporter}!get\_log@{get\_log}}
+\index{get\_log@{get\_log}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{get\_log()}{get\_log()}}
+{\footnotesize\ttfamily const std\+::string\& Exporter\+::get\+\_\+log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve log. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::string\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_exporter_a3e6552a8e20d64bc630cebd74c1f58f7}\label{class_exporter_a3e6552a8e20d64bc630cebd74c1f58f7}} 
+\index{Exporter@{Exporter}!get\_meshes\_count@{get\_meshes\_count}}
+\index{get\_meshes\_count@{get\_meshes\_count}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{get\_meshes\_count()}{get\_meshes\_count()}}
+{\footnotesize\ttfamily int Exporter\+::get\+\_\+meshes\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve el numero de meshes. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_exporter_a2e2191962453067d9b6befbc4b6842d1}\label{class_exporter_a2e2191962453067d9b6befbc4b6842d1}} 
+\index{Exporter@{Exporter}!get\_path@{get\_path}}
+\index{get\_path@{get\_path}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{get\_path()}{get\_path()}}
+{\footnotesize\ttfamily const std\+::string \& Exporter\+::get\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve la ruta de exportacion actual. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::string\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_exporter_aefd37f252280f8c4aa8942aad3295bf2}\label{class_exporter_aefd37f252280f8c4aa8942aad3295bf2}} 
+\index{Exporter@{Exporter}!set\_mesh\_by\_index@{set\_mesh\_by\_index}}
+\index{set\_mesh\_by\_index@{set\_mesh\_by\_index}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{set\_mesh\_by\_index()}{set\_mesh\_by\_index()}}
+{\footnotesize\ttfamily bool Exporter\+::set\+\_\+mesh\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{vertex\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{normals\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector2f}{Vector2f}}}]{uvs\mbox{[}$\,$\mbox{]},  }\item[{int}]{size\+\_\+v,  }\item[{int}]{size\+\_\+n,  }\item[{int}]{size\+\_\+uv }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de una malla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indice de la malla \\
+\hline
+{\em vertex} & \\
+\hline
+{\em normals} & \\
+\hline
+{\em uvs} & \\
+\hline
+{\em size\+\_\+v} & \\
+\hline
+{\em size\+\_\+n} & \\
+\hline
+{\em size\+\_\+uv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_exporter_a65ae525fd7dcfeec22910ad3dc5cd461}\label{class_exporter_a65ae525fd7dcfeec22910ad3dc5cd461}} 
+\index{Exporter@{Exporter}!set\_mesh\_submeshes\_count@{set\_mesh\_submeshes\_count}}
+\index{set\_mesh\_submeshes\_count@{set\_mesh\_submeshes\_count}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{set\_mesh\_submeshes\_count()}{set\_mesh\_submeshes\_count()}}
+{\footnotesize\ttfamily bool Exporter\+::set\+\_\+mesh\+\_\+submeshes\+\_\+count (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Modifica el tamaño del numero de submallas de una malla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indice de la malla \\
+\hline
+{\em size} & Numero de submallas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_exporter_ab4fd707721e3b7dab9e628659826ba91}\label{class_exporter_ab4fd707721e3b7dab9e628659826ba91}} 
+\index{Exporter@{Exporter}!set\_mesh\_transform@{set\_mesh\_transform}}
+\index{set\_mesh\_transform@{set\_mesh\_transform}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{set\_mesh\_transform()}{set\_mesh\_transform()}}
+{\footnotesize\ttfamily bool Exporter\+::set\+\_\+mesh\+\_\+transform (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{position,  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{rotation,  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{scale }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor del transform de una malla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indice de la malla \\
+\hline
+{\em position} & Posicion de la malla \\
+\hline
+{\em rotation} & Rotacion de la malla \\
+\hline
+{\em scale} & Escala de la malla \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_exporter_a8a53ffeabad803db16f0cafffd38793f}\label{class_exporter_a8a53ffeabad803db16f0cafffd38793f}} 
+\index{Exporter@{Exporter}!set\_meshes\_count@{set\_meshes\_count}}
+\index{set\_meshes\_count@{set\_meshes\_count}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{set\_meshes\_count()}{set\_meshes\_count()}}
+{\footnotesize\ttfamily void Exporter\+::set\+\_\+meshes\+\_\+count (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Modifica el tamaño del vector de mallas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_exporter_a5230d994d0bf785b380b9fd714f63779}\label{class_exporter_a5230d994d0bf785b380b9fd714f63779}} 
+\index{Exporter@{Exporter}!set\_path@{set\_path}}
+\index{set\_path@{set\_path}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{set\_path()}{set\_path()}}
+{\footnotesize\ttfamily void Exporter\+::set\+\_\+path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de la ruta actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_exporter_ad51828efe27f5445df5dfc178afe4d6c}\label{class_exporter_ad51828efe27f5445df5dfc178afe4d6c}} 
+\index{Exporter@{Exporter}!set\_submesh\_triangles@{set\_submesh\_triangles}}
+\index{set\_submesh\_triangles@{set\_submesh\_triangles}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{set\_submesh\_triangles()}{set\_submesh\_triangles()}}
+{\footnotesize\ttfamily bool Exporter\+::set\+\_\+submesh\+\_\+triangles (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{submesh,  }\item[{int}]{triangles\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de los triangulos de una submalla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indice de malla \\
+\hline
+{\em submesh} & Indice de submalla \\
+\hline
+{\em triangles} & Conjunto de triangulos \\
+\hline
+{\em size} & Numero de triangulos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_exporter_8h}{Exporter.\+h}}\item 
+D\+:/\+U\+N\+I\+V\+E\+R\+S\+I\+D\+A\+D/\+Unity/\+Tool-\/in-\/\+Unity/practice/code/sources/Exporter.\+cpp\end{DoxyCompactItemize}

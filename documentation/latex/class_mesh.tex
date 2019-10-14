@@ -1,0 +1,230 @@
+\hypertarget{class_mesh}{}\section{Mesh Class Reference}
+\label{class_mesh}\index{Mesh@{Mesh}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mesh_a2af137f1571af89172b9c102302c416b}{Mesh}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de \mbox{\hyperlink{class_mesh}{Mesh}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh_a5efe4da1a4c0971cfb037bd70304c303}{$\sim$\+Mesh}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de \mbox{\hyperlink{class_mesh}{Mesh}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_acaa2c19720e250b7fa2cc39c4dc8380e}{set\+\_\+transform}} (\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} position, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} rotation, \mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} scale)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de transform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a4f9777465484e8be22e6af6ec5d106f9}{set\+\_\+vertex}} (\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} v\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de vertex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a946e8b63ad2870c169364fc9399dcfaa}{set\+\_\+normals}} (\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}} n\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de normals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a0729b77413626492fb3bd15f7526adfc}{set\+\_\+texcoord}} (\mbox{\hyperlink{structmathexp_1_1_vector2f}{Vector2f}} tc\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de texcoord. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_mesh_a6e64ec108d5b2e8f53b8b22dc1ba52af}{get\+\_\+vertex\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de vertices. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_mesh_a7ac61f854653c3b6e0096252b2751588}{get\+\_\+log}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve log. \end{DoxyCompactList}\item 
+std\+::string \& \mbox{\hyperlink{class_mesh_a6202023fe60714cd0762c64cdf17248e}{export\+\_\+mesh}} (int last\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Exporta la malla individualmente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a37eeff1dbe843a226f88ae7f6ab48ff9}{set\+\_\+submeshes\+\_\+size}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Modifica el valor del tamaño de submallas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mesh_a03a9a8e4d18d74aa23c66a134b7c4a4e}{set\+\_\+triangles}} (int submesh, int triangles\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Modifica el valor del array de triangulos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{class_mesh_a53395da1def300c2455ef4b8c7c326dc}{L\+O\+G\+\_\+\+E\+R\+R\+OR}} = \char`\"{}E\+R\+R\+O\+R\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+M\+E\+SH\char`\"{}
+\begin{DoxyCompactList}\small\item\em Log de error por defecto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mesh_a2af137f1571af89172b9c102302c416b}\label{class_mesh_a2af137f1571af89172b9c102302c416b}} 
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily Mesh\+::\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor de \mbox{\hyperlink{class_mesh}{Mesh}}. 
+
+\mbox{\Hypertarget{class_mesh_a5efe4da1a4c0971cfb037bd70304c303}\label{class_mesh_a5efe4da1a4c0971cfb037bd70304c303}} 
+\index{Mesh@{Mesh}!````~Mesh@{$\sim$Mesh}}
+\index{````~Mesh@{$\sim$Mesh}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{$\sim$Mesh()}{~Mesh()}}
+{\footnotesize\ttfamily Mesh\+::$\sim$\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor de \mbox{\hyperlink{class_mesh}{Mesh}}. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mesh_a6202023fe60714cd0762c64cdf17248e}\label{class_mesh_a6202023fe60714cd0762c64cdf17248e}} 
+\index{Mesh@{Mesh}!export\_mesh@{export\_mesh}}
+\index{export\_mesh@{export\_mesh}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{export\_mesh()}{export\_mesh()}}
+{\footnotesize\ttfamily std\+::string \& Mesh\+::export\+\_\+mesh (\begin{DoxyParamCaption}\item[{int}]{last\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Exporta la malla individualmente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+index} & Indice de malla actual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string\& Texto de exportacion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_a7ac61f854653c3b6e0096252b2751588}\label{class_mesh_a7ac61f854653c3b6e0096252b2751588}} 
+\index{Mesh@{Mesh}!get\_log@{get\_log}}
+\index{get\_log@{get\_log}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{get\_log()}{get\_log()}}
+{\footnotesize\ttfamily const std\+::string \& Mesh\+::get\+\_\+log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve log. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::string\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_a6e64ec108d5b2e8f53b8b22dc1ba52af}\label{class_mesh_a6e64ec108d5b2e8f53b8b22dc1ba52af}} 
+\index{Mesh@{Mesh}!get\_vertex\_count@{get\_vertex\_count}}
+\index{get\_vertex\_count@{get\_vertex\_count}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{get\_vertex\_count()}{get\_vertex\_count()}}
+{\footnotesize\ttfamily size\+\_\+t Mesh\+::get\+\_\+vertex\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el numero de vertices. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_a946e8b63ad2870c169364fc9399dcfaa}\label{class_mesh_a946e8b63ad2870c169364fc9399dcfaa}} 
+\index{Mesh@{Mesh}!set\_normals@{set\_normals}}
+\index{set\_normals@{set\_normals}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{set\_normals()}{set\_normals()}}
+{\footnotesize\ttfamily void Mesh\+::set\+\_\+normals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{n\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de normals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Array de normales \\
+\hline
+{\em size} & Tamaño del array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mesh_a37eeff1dbe843a226f88ae7f6ab48ff9}\label{class_mesh_a37eeff1dbe843a226f88ae7f6ab48ff9}} 
+\index{Mesh@{Mesh}!set\_submeshes\_size@{set\_submeshes\_size}}
+\index{set\_submeshes\_size@{set\_submeshes\_size}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{set\_submeshes\_size()}{set\_submeshes\_size()}}
+{\footnotesize\ttfamily void Mesh\+::set\+\_\+submeshes\+\_\+size (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor del tamaño de submallas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mesh_a0729b77413626492fb3bd15f7526adfc}\label{class_mesh_a0729b77413626492fb3bd15f7526adfc}} 
+\index{Mesh@{Mesh}!set\_texcoord@{set\_texcoord}}
+\index{set\_texcoord@{set\_texcoord}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{set\_texcoord()}{set\_texcoord()}}
+{\footnotesize\ttfamily void Mesh\+::set\+\_\+texcoord (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmathexp_1_1_vector2f}{Vector2f}}}]{tc\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de texcoord. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tc} & Array de uvs \\
+\hline
+{\em size} & Tamaño del array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mesh_acaa2c19720e250b7fa2cc39c4dc8380e}\label{class_mesh_acaa2c19720e250b7fa2cc39c4dc8380e}} 
+\index{Mesh@{Mesh}!set\_transform@{set\_transform}}
+\index{set\_transform@{set\_transform}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{set\_transform()}{set\_transform()}}
+{\footnotesize\ttfamily void Mesh\+::set\+\_\+transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{position,  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{rotation,  }\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{scale }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Posicion \\
+\hline
+{\em rotation} & Rotacion \\
+\hline
+{\em scale} & Escala \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mesh_a03a9a8e4d18d74aa23c66a134b7c4a4e}\label{class_mesh_a03a9a8e4d18d74aa23c66a134b7c4a4e}} 
+\index{Mesh@{Mesh}!set\_triangles@{set\_triangles}}
+\index{set\_triangles@{set\_triangles}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{set\_triangles()}{set\_triangles()}}
+{\footnotesize\ttfamily bool Mesh\+::set\+\_\+triangles (\begin{DoxyParamCaption}\item[{int}]{submesh,  }\item[{int}]{triangles\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor del array de triangulos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em submesh} & Indice de submalla \\
+\hline
+{\em triangles} & Array de triangulos \\
+\hline
+{\em size} & Tamaño del array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_a4f9777465484e8be22e6af6ec5d106f9}\label{class_mesh_a4f9777465484e8be22e6af6ec5d106f9}} 
+\index{Mesh@{Mesh}!set\_vertex@{set\_vertex}}
+\index{set\_vertex@{set\_vertex}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{set\_vertex()}{set\_vertex()}}
+{\footnotesize\ttfamily void Mesh\+::set\+\_\+vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmathexp_1_1_vector3f}{Vector3f}}}]{v\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Array de vertices \\
+\hline
+{\em size} & Tamaño del array \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mesh_a53395da1def300c2455ef4b8c7c326dc}\label{class_mesh_a53395da1def300c2455ef4b8c7c326dc}} 
+\index{Mesh@{Mesh}!LOG\_ERROR@{LOG\_ERROR}}
+\index{LOG\_ERROR@{LOG\_ERROR}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{LOG\_ERROR}{LOG\_ERROR}}
+{\footnotesize\ttfamily const std\+::string Mesh\+::\+L\+O\+G\+\_\+\+E\+R\+R\+OR = \char`\"{}E\+R\+R\+O\+R\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+M\+E\+SH\char`\"{}}
+
+
+
+Log de error por defecto. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mesh_8h}{Mesh.\+h}}\item 
+D\+:/\+U\+N\+I\+V\+E\+R\+S\+I\+D\+A\+D/\+Unity/\+Tool-\/in-\/\+Unity/practice/code/sources/Mesh.\+cpp\end{DoxyCompactItemize}
