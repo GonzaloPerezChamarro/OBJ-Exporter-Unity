@@ -49,12 +49,12 @@ void Mesh::set_texcoord(Vector2f tc[], int size)
 	}
 }
 
-size_t Mesh::get_vertex_count() 
+size_t Mesh::get_vertex_count() const
 {
 	return vertex.size();
 }
 
-const std::string & Mesh::get_log()
+const std::string& Mesh::get_log() const
 {
 	return log;
 }

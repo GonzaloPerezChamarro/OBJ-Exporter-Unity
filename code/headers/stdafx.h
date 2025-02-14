@@ -7,10 +7,6 @@
 
 #include "targetver.h"
 
-#define WIN32_LEAN_AND_MEAN             // Excluir material rara vez utilizado de encabezados de Windows
-// Archivos de encabezado de Windows
+#define WIN32_LEAN_AND_MEAN
+// Windows headers
 #include <windows.h>
-
-
-
-// hacer referencia aquí a los encabezados adicionales que el programa necesita

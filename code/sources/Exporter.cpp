@@ -30,7 +30,7 @@ bool Exporter::export_obj(std::string & path, std::string & name)
 	return true;
 }
 
-const std::string & Exporter::get_path()
+const std::string & Exporter::get_path() const
 {
 	return string_to_char(path);
 }
@@ -120,7 +120,7 @@ bool Exporter::generate_file()
 	return true;
 }
 
-const char * Exporter::string_to_char(const std::string & s)
+const char * Exporter::string_to_char(const std::string & s) const
 {
 	int length_str = s.length() + 1;
 	char* temp = new char[length_str];

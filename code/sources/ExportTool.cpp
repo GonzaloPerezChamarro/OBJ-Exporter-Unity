@@ -1,5 +1,6 @@
-// ExportTool.cpp : Define las funciones exportadas de la aplicación DLL.
-//
+
+
+// ExportTool.cpp : Defines the functions exported of the DLL application.
 
 #include "stdafx.h"
 #include "Exporter.h"

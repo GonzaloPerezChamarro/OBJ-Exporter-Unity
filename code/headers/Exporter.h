@@ -2,10 +2,10 @@
  * @file Exporter.h
  * @author Gonzalo Perez Chamarro (Gonzalo1810 GitHub.com)
  * @brief Clase exportador
- * @version 0.1
+ * @version 1.0
  * @date 2019-06-07
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -26,160 +26,136 @@ class Exporter
 private:
 	typedef std::shared_ptr<Mesh> sh_Mesh;
 
-	/**
-	 * @brief Ruta de exportacion
-	 * 
-	 */
-	std::string path;
-
-	/**
-	 * @brief Mensajes de error
-	 * 
-	 */
-	std::string log;
-
-	/**
-	 * @brief Nombre del archivo
-	 * 
-	 */
+	/* File name */
 	std::string name;
 
-	/**
-	 * @brief Conjunto de mallas que se van a exportar
-	 * 
-	 */
+	/* Export path*/
+	std::string path;
+
+	/* List of meshes to be exported */
 	std::vector<sh_Mesh> meshes;
 
+	/* Error log */
+	std::string log;
+
 public:
-	/**
-	 * @brief Construye el exportador
-	 * 
-	 */
+	/* Constructor */
 	Exporter();
 
-	/**
-	 * @brief Destructor
-	 * 
-	 */
+	/* Destructor by default */
 	~Exporter() = default;
 
 public:
-/**
- * @brief Genera un archivo .obj con el nombre y en la ruta recibidas
- * 
- * @param path Directorio de creacion
- * @param name Nombre del archivo
- * @return true Exportacion correcta
- * @return false Error
- */
-	bool export_obj(std::string & path, std::string & name);
+	/**
+	 * @brief It generates a .obj file with the name and path received
+	 * 
+	 * @param path Directory to create the file
+	 * @param name File name
+	 * @return if it was successful
+	 */
+	bool export_obj(std::string& path, std::string& name);
 
-/**
- * @brief Devuelve la ruta de exportacion actual
- * 
- * @return const std::string& 
- */
-	const std::string & get_path();
+	/**
+	 * @brief Returns the path of the current export
+	 */
+	const std::string& get_path() const;
 
-/**
- * @brief Modifica el valor de la ruta actual
- * 
- * @param path 
- */
+	/**
+	 * @brief Modifies the value of the current path
+	 */
 	void set_path(const std::string & path);
 
-/**
- * @brief Añade una nueva malla al vector de mallas
- * 
- * @param position Posicion de la malla
- * @param rotation rotacion de la malla
- * @param scale escala de la malla
- * @param vertex conjunto de vertices
- * @param normals conjunto de normales
- * @param uvs conjunto de uvs
- * @param size_v 
- * @param size_n 
- * @param size_uv 
- */
-	void add_mesh(Vector3f position, Vector3f rotation, Vector3f scale, Vector3f vertex[], Vector3f normals[], Vector2f uvs[], int size_v, int size_n, int size_uv);
-/**
- * @brief Modifica el valor del transform de una malla
- * 
- * @param index Indice de la malla
- * @param position Posicion de la malla
- * @param rotation Rotacion de la malla
- * @param scale Escala de la malla
- * @return true 
- * @return false 
- */
-	bool set_mesh_transform(int index, Vector3f position, Vector3f rotation, Vector3f scale);
-/**
- * @brief Modifica el valor de una malla
- * 
- * @param index Indice de la malla
- * @param vertex 
- * @param normals 
- * @param uvs 
- * @param size_v 
- * @param size_n 
- * @param size_uv 
- * @return true 
- * @return false 
- */
-	bool set_mesh_by_index(int index, Vector3f vertex[], Vector3f normals[], Vector2f uvs[], int size_v, int size_n, int size_uv);
 	/**
-	 * @brief Modifica el tamaño del vector de mallas
+	 * @brief Adds a new mesh to the vector
 	 * 
-	 * @param size 
+	 * @param position Mesh position
+	 * @param rotation Mesh rotation
+	 * @param scale Mesh scale
+	 * @param vertex array of vertex
+	 * @param normals array of normals
+	 * @param uvs array of uvs
+	 * @param size_v size of vertex array
+	 * @param size_n size of normals array
+	 * @param size_uv size of uvs array
 	 */
-	void set_meshes_count(int size);
-/**
- * @brief Modifica el tamaño del numero de submallas de una malla
- * 
- * @param index Indice de la malla
- * @param size Numero de submallas
- * @return true 
- * @return false 
- */
-	bool set_mesh_submeshes_count(int index, int size);
+	void add_mesh(Vector3f position, Vector3f rotation, Vector3f scale, Vector3f vertex[], Vector3f normals[], Vector2f uvs[], int size_v, int size_n, int size_uv);
+
 	/**
-	 * @brief Modifica el valor de los triangulos de una submalla
+	 * @brief Modifies the mesh's transform
 	 * 
-	 * @param index Indice de malla
-	 * @param submesh Indice de submalla
-	 * @param triangles Conjunto de triangulos
-	 * @param size Numero de triangulos
+	 * @param index Mesh index
+	 * @param position Mesh position
+	 * @param rotation Mesh rotation
+	 * @param scale Mesh scale
 	 * @return true 
 	 * @return false 
 	 */
-	bool set_submesh_triangles(int index, int submesh, int triangles[], int size);
-/**
- * @brief Devuelve log 
- * 
- * @return const std::string& 
- */
-	const std::string & get_log() { return log; }
+	bool set_mesh_transform(int index, Vector3f position, Vector3f rotation, Vector3f scale);
 
-/**
- * @brief Devuelve el numero de meshes
- * 
- * @return int 
- */
-	int get_meshes_count() { return meshes.size(); }
+	/**
+	 * @brief Modifies a mesh
+	 * 
+	 * @param index Index of the mesh
+	 * @param vertex array of vertex
+	 * @param normals array of normals 
+	 * @param uvs array of uvs
+	 * @param size_v size of vertex array
+	 * @param size_n size of normals array
+	 * @param size_uv size of uvs array
+	 * @return true 
+	 * @return false 
+	 */
+	bool set_mesh_by_index(int index, Vector3f vertex[], Vector3f normals[], Vector2f uvs[], int size_v, int size_n, int size_uv);
+	
+	/**
+	 * @brief Modifies the size of the meshes vector
+	 * @param size 
+	 */
+	void set_meshes_count(int size);
+
+	/**
+	 * @brief Modifica el tamaño del numero de submallas de una malla
+	 * @brief Modifies the count of submeshes of a mesh
+	 * 
+	 * @param index index of the mesh
+	 * @param size Number of submeshes
+	 * @return true 
+	 * @return false 
+	 */
+	bool set_mesh_submeshes_count(int index, int size);
+
+	/**
+	* @brief Modifica el valor de los triangulos de una submalla
+	* @brief Modifies the triangles of a submesh
+	* 
+	* @param index Index of the mesh
+	* @param submesh Index of the submesh
+	* @param triangles Array of triangles
+	* @param size Number of triangles
+	* @return true 
+	* @return false 
+	*/
+	bool set_submesh_triangles(int index, int submesh, int triangles[], int size);
+
+	/**
+	 * @brief Returns the log
+	 */
+	const std::string & get_log() const { return log; }
+
+	/**
+	 * @brief Returns the number of meshes
+	 */
+	int get_meshes_count() const { return meshes.size(); }
 
 private:
-/**
- * @brief Genera el archivo .obj
- * 
- * @return true 
- * @return false 
- */
+	/**
+	 * @brief Generates the .obj file
+	 * @return if was succesful
+	 */
 	bool generate_file();
-/**
- * @brief Hace una conversion de string a array de char
- * 
- * @param s 
- * @return const char* 
- */
-	const char * string_to_char(const std::string & s);
+
+	/**
+	 * @brief Converts a string into a char array
+	 */
+	const char* string_to_char(const std::string& s) const;
 };

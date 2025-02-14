@@ -5,7 +5,7 @@
  * @version 0.1
  * @date 2019-06-08
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -19,133 +19,101 @@
 #include <string>
 
 
-
 class Mesh
 {
 private:
-/**
- * @brief Transform de la malla
- * 
- */
+	/* mesh transform */
 	Transform mesh_transform;
 
-/**
- * @brief Conjunto de vertices de la malla
- * 
- */
+	/* List of mesh vertex */
 	std::vector<Vector3f> vertex;
-	/**
-	 * @brief COnjunto de normales de la malla
-	 * 
-	 */
+
+	/* List of mesh normals */
 	std::vector<Vector3f> normals;
-	/**
-	 * @brief Conjunto de coordenadas de textura 
-	 * 
-	 */
+
+	 /* List of mesh texture coordinates */
 	std::vector<Vector2f> texcoord;
-	/**
-	 * @brief Triangulos
-	 * 
-	 */
+	
+	/* List of submeshes */
 	std::vector<std::vector<int>> triangles_submeshes;
 
-/**
- * @brief Texto de log
- * 
- */
+	/* Error log */
 	std::string log;
 
+	/* Data */
 	std::string data;
 
 public:
-/**
- * @brief Log de error por defecto
- * 
- */
+	/* Default log error */
 	const std::string LOG_ERROR = "ERROR_EXPORT_MESH";
 
 public:
-/**
- * @brief Constructor de Mesh
- * 
- */
+	/* Constructor */
 	Mesh();
 
-	/**
-	 * @brief Destructor de Mesh
-	 * 
-	 */
+	/* Destructor */
 	~Mesh();
 
 public:
-/**
- * @brief Modifica el valor de transform 
- * 
- * @param position Posicion
- * @param rotation Rotacion
- * @param scale Escala
- */
+	/**
+	 * @brief Modifies the transform
+	 * @param position
+	 * @param rotation
+	 * @param scale
+	 */
 	void set_transform(Vector3f position, Vector3f rotation, Vector3f scale);
 
-/**
- * @brief Modifica el valor de vertex 
- * 
- * @param v Array de vertices
- * @param size Tamaño del array
- */
+	/**
+	 * @brief Modifies the vertex
+	 * @param v array of vertex
+	 * @param size of the array
+	 */
 	void set_vertex(Vector3f v[], int size);
-/**
- * @brief Modifica el valor de normals 
- * 
- * @param n Array de normales
- * @param size  Tamaño del array
- */
+
+	/**
+	 * @brief Modifies the normals
+	 * @param n Array of normals
+	 * @param size of the array
+	 */
 	void set_normals(Vector3f n[], int size);
 
-/**
- * @brief Modifica el valor de texcoord 
- * 
- * @param tc Array de uvs
- * @param size  Tamaño del array
- */
+	/**
+	 * @brief Modifies the texture coord array
+	 * @param tc Array of texture coord
+	 * @param size of the array
+	 */
 	void set_texcoord(Vector2f tc[], int size);
-/**
- * @brief Devuelve el numero de vertices
- * 
- * @return size_t 
- */
-	size_t get_vertex_count();
-/**
- * @brief Devuelve log 
- * 
- * @return const std::string& 
- */
-	const std::string &  get_log();
-/**
- * @brief Exporta la malla individualmente
- * 
- * @param last_index Indice de malla actual
- * @return std::string& Texto de exportacion
- */
-	std::string & export_mesh(int last_index);
-/**
- * @brief Modifica el valor del tamaño de submallas
- * 
- * @param size 
- */
+
+	/**
+	 * @brief Returns the number of vertex
+	 */
+	size_t get_vertex_count() const;
+
+	/**
+	 * @brief Returns the log
+	 */
+	const std::string& get_log() const;
+
+	/**
+	 * @brief exports the mesh
+	 * @param last_index index of the mesh
+	 * @return export text
+	 */
+	std::string& export_mesh(int last_index);
+
+	/**
+	 * @brief Modifies the size of submeshes
+	 */
 	void set_submeshes_size(size_t size);
-/**
- * @brief Modifica el valor del array de triangulos
- * 
- * @param submesh Indice de submalla
- * @param triangles Array de triangulos
- * @param size  Tamaño del array
- * @return true 
- * @return false 
- */
+
+	/**
+	 * @brief Modifies the triangles of a submesh
+	 * @param submesh index of the submesh
+	 * @param triangles Array of triangles
+	 * @param size of the array
+	 * @return true 
+	 * @return false 
+	 */
 	bool set_triangles(int submesh, int triangles[], int size);
-
-
 };
 #endif
